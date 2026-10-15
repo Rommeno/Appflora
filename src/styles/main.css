@@ -1,0 +1,371 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #243a2e;
+  background: #f4f5ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --color-ink: #243a2e;
+  --color-muted: #778276;
+  --color-green: #284b38;
+  --color-paper: #f4f5ed;
+  --font-display: Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.app-shell {
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  height: 88px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe3d8;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-green);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.brand__mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-green);
+  color: #e5ecd9;
+  font-size: 16px;
+}
+
+.topbar__note,
+.collection__count {
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.welcome {
+  position: relative;
+  display: flex;
+  min-height: 430px;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 64px 0 72px;
+  border-bottom: 1px solid #dfe3d8;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #728171;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 18px;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 500;
+  letter-spacing: -2.5px;
+  line-height: 1.08;
+}
+
+h1 em {
+  color: #728b62;
+  font-weight: 500;
+}
+
+.welcome__description {
+  position: relative;
+  z-index: 1;
+  max-width: 390px;
+  margin-bottom: 28px;
+  color: #68756a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 24px;
+  padding: 13px 17px;
+  border-radius: 3px;
+  background: var(--color-green);
+  color: #f4f5ed;
+  font-size: 12px;
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.button:hover {
+  background: #3a634a;
+}
+
+.welcome__art {
+  position: absolute;
+  right: 70px;
+  bottom: 20px;
+  width: 330px;
+  height: 330px;
+  opacity: 0.82;
+}
+
+.welcome__sun {
+  position: absolute;
+  top: 14px;
+  right: 25px;
+  width: 205px;
+  height: 205px;
+  border-radius: 50%;
+  background: #e7e9d8;
+}
+
+.welcome__stem {
+  position: absolute;
+  right: 129px;
+  bottom: 12px;
+  width: 4px;
+  height: 254px;
+  transform: rotate(17deg);
+  transform-origin: bottom;
+  border-radius: 50%;
+  background: #547658;
+}
+
+.welcome__leaf {
+  position: absolute;
+  width: 115px;
+  height: 54px;
+  border-radius: 100% 0 100% 0;
+  background: #779270;
+}
+
+.welcome__leaf--one {
+  top: 89px;
+  right: 109px;
+  transform: rotate(-27deg);
+}
+
+.welcome__leaf--two {
+  top: 147px;
+  right: 21px;
+  transform: rotate(155deg);
+  background: #91a47e;
+}
+
+.welcome__leaf--three {
+  top: 190px;
+  right: 142px;
+  transform: rotate(-14deg);
+  background: #91a47e;
+}
+
+.welcome__leaf--four {
+  top: 239px;
+  right: 57px;
+  transform: rotate(157deg);
+  background: #617f64;
+}
+
+.collection {
+  padding: 55px 0 72px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 8px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.plant-card {
+  overflow: hidden;
+  border: 1px solid #e1e4da;
+  border-radius: 5px;
+  background: #fafaf5;
+}
+
+.plant-card__illustration {
+  display: grid;
+  min-height: 185px;
+  place-items: center;
+  font-size: 66px;
+}
+
+.plant-card__illustration--sage {
+  background: #e4eadb;
+}
+
+.plant-card__illustration--lilac {
+  background: #ebe6ec;
+}
+
+.plant-card__illustration--ochre {
+  background: #f0ead8;
+}
+
+.plant-card__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 17px;
+}
+
+.plant-card__name {
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.plant-card__species {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.plant-card__tag {
+  padding: 6px 8px;
+  border-radius: 2px;
+  background: #eef0e8;
+  color: #677365;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.footer {
+  display: flex;
+  min-height: 66px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #dfe3d8;
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.footer span:last-child {
+  color: var(--color-green);
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    width: min(100% - 40px, 560px);
+  }
+
+  .welcome {
+    min-height: 490px;
+    justify-content: flex-start;
+    padding-top: 56px;
+  }
+
+  .welcome__art {
+    right: 0;
+    bottom: -45px;
+    transform: scale(0.72);
+    transform-origin: bottom right;
+  }
+
+  .plant-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .plant-card {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+  }
+
+  .plant-card__illustration {
+    min-height: 112px;
+    font-size: 44px;
+  }
+
+  .plant-card__body {
+    padding: 13px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app-shell {
+    width: calc(100% - 32px);
+  }
+
+  .topbar__note {
+    font-size: 11px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .footer {
+    gap: 16px;
+    font-size: 10px;
+  }
+}

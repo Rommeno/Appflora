@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "Herbário — o teu espaço botânico",
+  "short_name": "Herbário",
+  "description": "Descobre e acompanha as tuas plantas.",
+  "lang": "pt-PT",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f5ed",
+  "theme_color": "#f4f5ed",
+  "icons": [
+    {
+      "src": "/icons/leaf.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
