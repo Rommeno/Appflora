@@ -1,26 +1,40 @@
-const P={home:'M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10',box:'M3 4h18v4H3zM5 8v12h14V8M10 12h4',plant:'M4 4h16v16H4zM12 17v-6M12 11c0-3 2-4 4-4 0 3-2 4-4 4zM12 13c0-2-1.500-3-3.500-3 0 2.500 1.500 3 3.500 3z',sl:'M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M8 14v6',scan:'M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3M8 8h3v3H8zM13 13h3v3h-3z',bell:'M6 16V11a6 6 0 1112 0v5l2 2H4zM10 21h4',drop:'M12 3s6 6.500 6 11a6 6 0 01-12 0c0-4.500 6-11 6-11z',ok:'M5 12l5 5 9-10',clock:'M12 3a9 9 0 100 18 9 9 0 000-18zM12 7v5l3 2',sun:'M12 8a4 4 0 100 8 4 4 0 000-8zM12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.500 1.500M17.500 17.500L19 19M5 19l1.500-1.500M17.500 6.500L19 5',wind:'M3 8h11a3 3 0 10-3-3M3 12h16a3 3 0 11-3 3M3 16h7',th:'M10 4a2 2 0 014 0v9a4 4 0 11-4 0zM12 9v6',cam:'M4 8h3l2-3h6l2 3h3v11H4zM12 11a3.500 3.500 0 100 7 3.500 3.500 0 000-7z',back:'M19 12H5M11 6l-6 6 6 6',heart:'M12 20s-8-5-8-11a4.500 4.500 0 018-2.500A4.500 4.500 0 0120 9c0 6-8 11-8 11z',gear:'M12 9a3 3 0 100 6 3 3 0 000-6zM19 12l2-1-1.500-3-2 .5-1.500-1.500.5-2-3-1.500L12 5 10 3.500 7 5l.5 2L6 8.500l-2-.5L2.500 11l2 1v1l-2 1L4 17l2-.5L7.500 18l-.5 2 3 1.500L12 20l2 1.500 3-1.500-.5-2 1.500-1.500 2 .5L21 14l-2-1z',plus:'M12 5v14M5 12h14',hist:'M3 12a9 9 0 109-9 9 9 0 00-7 3.500L3 8M3 3v5h5M12 8v4l3 2',leaf:'M5 19C5 10 10 5 20 4c0 10-5 15-14 15zM5 19l8-8',flask:'M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3',up:'M12 19V5M6 11l6-6 6 6',dn:'M12 5v14M6 13l6 6 6-6',lay:'M4 5h16v14H4zM9 5v14M15 5v14',fan:'M12 12m-1 0a1 1 0 102 0 1 1 0 10-2 0M12 11C9 6 11 3 14 4c2 1 1 5-2 7zM13 12c5-3 8-1 7 2-1 2-5 1-7-2zM12 13c3 5 1 8-2 7-2-1-1-5 2-7zM11 12C6 15 3 13 4 10c1-2 5-1 7 2z',bm:'M6 3h12v18l-6-4-6 4zM12 8v4M10 10h4',tag:'M12 3l1.500 5 5 1.500-5 1.500L12 16l-1.500-5-5-1.500 5-1.500z',bad:'M5 19L19 5M7 5l12 12-2 2L5 7z'};
+const P={home:'M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10',box:'M3 4h18v4H3zM5 8v12h14V8M10 12h4',plant:'M4 4h16v16H4zM12 17v-6M12 11c0-3 2-4 4-4 0 3-2 4-4 4zM12 13c0-2-1.500-3-3.500-3 0 2.500 1.500 3 3.500 3z',sl:'M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M8 14v6',scan:'M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3M8 8h3v3H8zM13 13h3v3h-3z',bell:'M6 16V11a6 6 0 1112 0v5l2 2H4zM10 21h4',drop:'M12 3s6 6.500 6 11a6 6 0 01-12 0c0-4.500 6-11 6-11z',ok:'M5 12l5 5 9-10',clock:'M12 3a9 9 0 100 18 9 9 0 000-18zM12 7v5l3 2',sun:'M12 8a4 4 0 100 8 4 4 0 000-8zM12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.500 1.500M17.500 17.500L19 19M5 19l1.500-1.500M17.500 6.500L19 5',wind:'M3 8h11a3 3 0 10-3-3M3 12h16a3 3 0 11-3 3M3 16h7',th:'M10 4a2 2 0 014 0v9a4 4 0 11-4 0zM12 9v6',cam:'M4 8h3l2-3h6l2 3h3v11H4zM12 11a3.500 3.500 0 100 7 3.500 3.500 0 000-7z',back:'M19 12H5M11 6l-6 6 6 6',heart:'M12 20s-8-5-8-11a4.500 4.500 0 018-2.500A4.500 4.500 0 0120 9c0 6-8 11-8 11z',gear:'M12 9a3 3 0 100 6 3 3 0 000-6zM19 12l2-1-1.500-3-2 .5-1.500-1.500.5-2-3-1.500L12 5 10 3.500 7 5l.5 2L6 8.500l-2-.5L2.500 11l2 1v1l-2 1L4 17l2-.5L7.500 18l-.5 2 3 1.500L12 20l2 1.500 3-1.500-.5-2 1.500-1.500 2 .5L21 14l-2-1z',plus:'M12 5v14M5 12h14',hist:'M3 12a9 9 0 109-9 9 9 0 00-7 3.500L3 8M3 3v5h5M12 8v4l3 2',refresh:'M20 11a8 8 0 10-2.5 5.6M20 4v7h-7',leaf:'M5 19C5 10 10 5 20 4c0 10-5 15-14 15zM5 19l8-8',flask:'M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3',up:'M12 19V5M6 11l6-6 6 6',dn:'M12 5v14M6 13l6 6 6-6',lay:'M4 5h16v14H4zM9 5v14M15 5v14',fan:'M12 12m-1 0a1 1 0 102 0 1 1 0 10-2 0M12 11C9 6 11 3 14 4c2 1 1 5-2 7zM13 12c5-3 8-1 7 2-1 2-5 1-7-2zM12 13c3 5 1 8-2 7-2-1-1-5 2-7zM11 12C6 15 3 13 4 10c1-2 5-1 7 2z',bm:'M6 3h12v18l-6-4-6 4zM12 8v4M10 10h4',tag:'M12 3l1.500 5 5 1.500-5 1.500L12 16l-1.500-5-5-1.500 5-1.500z',bad:'M5 19L19 5M7 5l12 12-2 2L5 7z'};
 const ic=n=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${P[n]}"/></svg>`;
 const LEAF='<svg class="leaf" viewBox="0 0 100 120"><path d="M50 8C20 20 8 55 30 85c8 10 14 14 20 25 6-11 12-15 20-25C92 55 80 20 50 8z" fill="#3f8a5c"/><path d="M50 8C38 25 30 50 38 80c6 8 10 12 12 30z" fill="#f2efc9" opacity=".85"/><path d="M50 14v96M50 40l-20 14M50 40l20 14M50 62l-22 14M50 62l22 14" stroke="#e9f4d8" stroke-width="2" fill="none"/></svg>';
-const D={tab:'home',plant:null,fav:true,lights:true,lightPct:85,hum:true,humTarget:75,fan:'Média',res:80,profile:0,adding:false,hist:false,photo:null,
-profiles:['Tropical','Estaquia / Mudas','Noite / Repouso'],
-shelves:[{n:'Prateleira 1 - Superior',d:'4 plantas: Monsteras & Filodendros',t:24,h:78,i:'up'},{n:'Prateleira 2 - Central',d:'5 plantas: Alocasias & Begónias',t:23.5,h:81,i:'lay'},{n:'Prateleira 3 - Inferior',d:'3 plantas: Propagações & Musgos',t:22,h:85,i:'dn'}],
-rules:[{i:'sun',t:'Ciclo de Iluminação',d:'Ligar às 07:00, desligar às 21:00',tag:'Espectro Vegetativo',m:'14h fotoperíodo',on:true},{i:'drop',t:'Manter Humidade',d:'Ligar nebulizador se < 68%',tag:'Sensor Superior',m:'Atualmente 72%',on:true},{i:'wind',t:'Circulação de Ar',d:'Ventilar 10 min a cada hora',tag:'Ventoinha Dupla',m:'Próximo em 18m',on:true},{i:'th',t:'Alerta de Temperatura',d:'Avisar se > 28°C',tag:'Push & Exaustor',m:'Atualmente 24.2°C',on:true}],
-plants:[{id:1,n:'Alocasia Frydek',shelf:'Prateleira Superior',how:'150ml',days:0,note:'Substrato seco à superfície'},{id:2,n:'Monstera Deliciosa',shelf:'Prateleira Central',how:'250ml',days:2},{id:3,n:'Philodendron Melanochrysum',shelf:'Base & Propagação',how:'Borrifar',days:3},{id:4,n:'Monstera Thai Constellation',shelf:'Prateleira Superior',how:'150ml',days:3,soil:58,hum:76,temp:24,detail:1,
-h:[{i:'drop',t:'Rega leve (150ml)',d:'Água desmineralizada + pH 6.2',w:'Ontem'},{i:'leaf',t:'Nova folha detetada',d:'Comprovada fenestração precoce',w:'Há 5 dias'},{i:'flask',t:'Fertilização suave',d:'Solução NPK 10-10-10 a 25%',w:'Há 12 dias'}]}],
-scan:null,scans:[]};
+const REAL_PLANT='https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80';
+const D={tab:'home',plant:null,fav:true,lights:true,lightPct:85,hum:true,humTarget:75,fan:'Média',res:80,profile:0,adding:false,hist:false,photo:null,loggedIn:false,sessionUser:null,authView:'login',profiles:['Tropical','Estaquia / Mudas','Noite / Repouso'],shelves:[{n:'Prateleira 1 - Superior',d:'4 plantas: Monsteras & Filodendros',t:24,h:78,i:'up'},{n:'Prateleira 2 - Central',d:'5 plantas: Alocasias & Begónias',t:23.5,h:81,i:'lay'},{n:'Prateleira 3 - Inferior',d:'3 plantas: Propagações & Musgos',t:22,h:85,i:'dn'}],rules:[{i:'sun',t:'Ciclo de Iluminação',d:'Ligar às 07:00, desligar às 21:00',tag:'Espectro Vegetativo',m:'14h fotoperíodo',on:true},{i:'drop',t:'Manter Humidade',d:'Ligar nebulizador se < 68%',tag:'Sensor Superior',m:'Atualmente 72%',on:true},{i:'wind',t:'Circulação de Ar',d:'Ventilar 10 min a cada hora',tag:'Ventoinha Dupla',m:'Próximo em 18m',on:true},{i:'th',t:'Alerta de Temperatura',d:'Avisar se > 28°C',tag:'Push & Exaustor',m:'Atualmente 24.2°C',on:true}],plants:[{id:1,n:'Alocasia Frydek',shelf:'Prateleira Superior',how:'150ml',days:0,note:'Substrato seco à superfície'},{id:2,n:'Monstera Deliciosa',shelf:'Prateleira Central',how:'250ml',days:2},{id:3,n:'Philodendron Melanochrysum',shelf:'Base & Propagação',how:'Borrifar',days:3},{id:4,n:'Monstera Thai Constellation',shelf:'Prateleira Superior',how:'150ml',days:3,soil:58,hum:76,temp:24,detail:1,h:[{i:'drop',t:'Rega leve (150ml)',d:'Água desmineralizada + pH 6.2',w:'Ontem'},{i:'leaf',t:'Nova folha detetada',d:'Comprovada fenestração precoce',w:'Há 5 dias'},{i:'flask',t:'Fertilização suave',d:'Solução NPK 10-10-10 a 25%',w:'Há 12 dias'}]}],scan:null,scans:[]};
+const AUTH_KEY='fc_accounts';
+const normalizeEmail=v=>String(v||'').trim().toLowerCase();
+function readAccounts(){try{return JSON.parse(localStorage.getItem(AUTH_KEY)||'[]')}catch{return[]}}
+function writeAccounts(rows){try{localStorage.setItem(AUTH_KEY,JSON.stringify(rows))}catch(e){}}
+function demoAccount(){const rows=readAccounts();if(rows.length)return rows[0];const seed={name:'Sofia Silva',email:'sofia@flora.com',password:'flora123'};writeAccounts([seed]);return seed}
 let S=Object.assign({},D);
 try{const s=JSON.parse(localStorage.getItem('fc')||'null');if(s)S=Object.assign({},D,s,{tab:'home',plant:null,adding:false,hist:false,photo:null})}catch(e){}
+if(!S.sessionUser && !readAccounts().length) demoAccount();
 const save=()=>{try{const{photo,...r}=S;localStorage.setItem('fc',JSON.stringify(r))}catch(e){}};
 const $=s=>document.querySelector(s);
-let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2200)}
-const hdr=(l)=>`<div class="top"><div class="brand">${ic('plant')}${l||'FloraCabinet'}</div><button class="ib" data-a="bell" aria-label="Notificações" style="background:none">${ic('bell')}</button></div>`;
+let tt;function toast(m){const t=$('#toast');if(!t)return; t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2200)}
+
+function authScreen(){
+ const views={login:{label:'Entrar',icon:'home',title:'Bem-vindo de volta',subtitle:'Acesse a sua conta para acompanhar o armário e o cuidado das plantas.'},signup:{label:'Criar conta',icon:'plant',title:'Criar conta',subtitle:'Configure o seu perfil e começa a vigiar o teu ecossistema.'},recover:{label:'Recuperar palavra-passe',icon:'drop',title:'Recuperar palavra-passe',subtitle:'Recebe um link de redefinição para o teu e-mail.'}};
+ const active=views[S.authView]||views.login;
+ return `<div class="auth-shell"><div class="auth-backdrop"></div><div class="auth-card"><div class="auth-brand"><div class="brand-mark">${ic('plant')}</div><div><div class="lbl auth-kicker">FloraCabinet</div><div class="auth-title">${active.title}</div></div></div><p class="auth-subtitle">${active.subtitle}</p>
+ <div class="auth-tabs">${Object.entries(views).map(([key,v])=>`<button class="auth-tab ${S.authView===key?'active':''}" data-a="auth-mode" data-v="${key}">${v.label}</button>`).join('')}</div>
+ <div class="demo-box">Conta demo: sofia@flora.com / flora123</div>
+ ${S.authView==='login' ? `<form class="auth-form" id="login-form"><label class="field"><span>E-mail</span><input id="login-email" type="email" placeholder="nome@email.com" autocomplete="email" required></label><label class="field"><span>Palavra-passe</span><input id="login-password" type="password" placeholder="••••••••" autocomplete="current-password" required></label><button class="btn w auth-btn" type="submit" data-a="auth-login">${ic('ok')}Entrar</button></form>` : ''}
+ ${S.authView==='signup' ? `<form class="auth-form" id="signup-form"><label class="field"><span>Nome</span><input id="signup-name" type="text" placeholder="Sofia Silva" autocomplete="name" required></label><label class="field"><span>E-mail</span><input id="signup-email" type="email" placeholder="nome@email.com" autocomplete="email" required></label><label class="field"><span>Palavra-passe</span><input id="signup-password" type="password" placeholder="Mín. 6 caracteres" minlength="6" autocomplete="new-password" required></label><button class="btn w auth-btn" type="submit" data-a="auth-signup">${ic('plant')}Criar conta</button></form>` : ''}
+ ${S.authView==='recover' ? `<form class="auth-form" id="recover-form"><label class="field"><span>E-mail</span><input id="recover-email" type="email" placeholder="nome@email.com" autocomplete="email" required></label><button class="btn soft w auth-btn" type="submit" data-a="auth-recover">${ic('drop')}Enviar link de recuperação</button></form>` : ''}
+ <div class="auth-foot"><span>${S.authView==='login'?'Ainda não tens conta?':'Já tens conta?'}</span><button class="inline-action" data-a="auth-mode" data-v="${S.authView==='login'?'signup':'login'}">${S.authView==='login'?'Criar conta':'Entrar agora'}</button></div>
+ </div></div>`;
+}
+
+const hdr=(l)=>`<div class="top"><div class="brand">${ic('plant')}${l||'FloraCabinet'}</div><div class="row" style="gap:8px"><button class="btn sm" data-a="logout" style="padding:8px 12px;background:var(--ch);color:var(--pr);border:1px solid var(--ln)">Sair</button><button class="ib" data-a="bell" aria-label="Notificações" style="background:none">${ic('bell')}</button></div></div>`;
 const tog=(a,v,l)=>`<button class="tog" role="switch" aria-checked="${v}" aria-label="${l}" data-a="${a}"></button>`;
 const when=d=>d===0?'Hoje':d===1?'Amanhã':`Em ${d} dias`;
 
 function home(){
  const pend=S.plants.filter(p=>p.days===0),next=S.plants.filter(p=>p.days>0).sort((a,b)=>a.days-b.days);
- const p=pend[0];
- return hdr()+`<h1>Olá, Sofia</h1><p class="sub">${pend.length?'Tudo calmo no armário. '+(pend.length==1?'Uma planta precisa':pend.length+' plantas precisam')+' da tua atenção.':'Tudo calmo no armário. Nenhuma planta precisa de rega hoje.'}</p>
+ return hdr()+`<h1>Olá, ${S.sessionUser?.name||'Sofia'}</h1><p class="sub">${pend.length?'Tudo calmo no armário. '+(pend.length==1?'Uma planta precisa':pend.length+' plantas precisam')+' da tua atenção.':'Tudo calmo no armário. Nenhuma planta precisa de rega hoje.'}</p>
  <div class="pill"><span class="dot"></span>Armário Saudável &nbsp;•&nbsp; 23.5°C &nbsp;•&nbsp; 72% Humidade</div>
  <div class="sec"><h2>${ic('drop')}Foco do Dia: Rega</h2><span class="tag">${pend.length} Pendente${pend.length==1?'':'s'}</span></div>
  ${pend.map(p=>`<div class="card"><div class="row sp" style="align-items:flex-start"><div><div class="lbl">${p.shelf}</div><div class="name" style="font-size:22px;margin:8px 0 4px">${p.n}</div><p class="sub">${p.note||'Rega programada'} • ${p.how} recomendados</p></div><div class="circ ct">${ic('drop')}</div></div>
@@ -35,7 +49,7 @@ function cab(){
  <div class="tiles"><div class="tile"><small>Temp</small><b>${s.t}°C</b></div><div class="tile"><small>Humidade</small><b>${s.h}%</b></div><div class="tile"><small>Luz</small><b style="font-size:16px"><span class="dot"></span> ${S.lights?'Ligada':'Desligada'}</b></div></div></div>`).join('')}
  <div class="sec"><span class="lbl">Controlos básicos</span><button class="lbl" data-a="cal" style="display:flex;gap:6px;align-items:center">${ic('sl')}Calibrar</button></div>
  <div class="card" style="padding:6px 20px">
- <div class="ctl"><div class="row sp"><span class="row">${ic('sun')}<b style="font-weight:500">Luzes de Cultivo</b></span><span class="row"><small class="sub">${S.lightPct}%</small>${tog('lights',S.lights,'Luzes de cultivo')}</span></div><input type="range" min="0" max="100" value="${S.lightPct}" data-r="light" aria-label="Intensidade da luz" ${S.lights?'':'disabled'}></div>
+ <div class="ctl"><div class="row sp"><span class="row">${ic('sun')}<b style="font-weight:500">Luzes de Cultivo</b></span><span class="sub">${S.lightPct}%</span></div><div class="row sp" style="margin-top:12px"><small class="sub">Potência</small>${tog('lights',S.lights,'Luzes de Cultivo')}</div><input data-r="light" type="range" min="0" max="100" value="${S.lightPct}" aria-label="Intensidade da luz"></div>
  <div class="ctl row sp"><span class="row">${ic('drop')}<span><b style="font-weight:500">Humidificador</b><div class="sub" style="font-size:13px">Alvo Automático: ${S.humTarget}% RH</div></span></span>${tog('hum',S.hum,'Humidificador')}</div>
  <div class="ctl"><div class="row sp"><span class="row">${ic('fan')}<b style="font-weight:500">Ventilação</b></span><small class="sub">Ciclo Ativo</small></div><div class="seg">${['Baixa','Média','Alta'].map(f=>`<button data-a="fan" data-v="${f}" aria-pressed="${S.fan==f}">${f}</button>`).join('')}</div></div>
  <div class="ctl"><div class="row sp"><span class="row">${ic('drop')}Nível do Reservatório</span><b class="d" style="color:var(--pr);font-size:20px">${S.res}%</b></div><div class="bar" style="margin:12px 0 8px"><i style="width:${S.res}%"></i></div><div class="row sp sub" style="font-size:13px"><span>${(S.res*.035).toFixed(1)}L restantes</span><span>Aprox. ${Math.round(S.res*.1125)} dias</span></div></div></div>
@@ -44,10 +58,11 @@ function cab(){
 function plants(){
  if(S.plant){const p=S.plants.find(x=>x.id==S.plant);return detail(p)}
  return hdr()+`<h1>Plantas</h1><p class="sub">${S.plants.length} plantas no armário</p><div class="card list" style="margin-top:18px">${S.plants.map(p=>`<button class="it" data-a="open" data-id="${p.id}"><span class="circ ct">${ic('plant')}</span><span class="grow"><div class="name">${p.n}</div><div class="sub" style="font-size:14px">${p.shelf}</div></span><span class="chip">${when(p.days)}</span></button>`).join('')}</div>`}
+
 function detail(p){
  p.h=p.h||[];const soil=p.soil||60;
  return `<div class="row sp" style="height:72px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5"><button class="ib" data-a="back" aria-label="Voltar" style="background:var(--sf);border:1px solid var(--ln)">${ic('back')}</button><div style="text-align:center"><div class="lbl" style="font-size:11px">Ficha botânica</div><div class="name" style="font-size:19px">${p.n}</div></div><button class="ib" data-a="fav" aria-label="Favorito" aria-pressed="${S.fav}" style="background:var(--sf);border:1px solid var(--ln);color:${S.fav?'var(--pr)':'var(--mu)'}">${ic('heart')}</button></div>
- <div class="hero">${S.photo&&S.photo.for==p.id?`<img src="${S.photo.src}" alt="${p.n}">`:LEAF}<span class="a">● ${p.shelf}</span><span class="b">Live IoT</span><h3 style="font-size:18px;bottom:20px">Estágio Vegetativo Ativo</h3><span class="c">Saudável</span></div>
+ <div class="hero">${S.photo&&S.photo.for==p.id?`<img src="${S.photo.src}" alt="${p.n}">`:`<img src="${REAL_PLANT}" alt="${p.n}" loading="eager">`}<span class="a">● ${p.shelf}</span><span class="b">Live IoT</span><h3 style="font-size:18px;bottom:20px">Estágio Vegetativo Ativo</h3><span class="c">Saudável</span></div>
  <div class="sec"><h2>Métricas Vitais</h2><span class="sub" style="font-size:13px">Atualizado há 4m</span></div>
  <div class="m"><div class="card"><small>Humidade</small><b>${p.hum||76}%</b><div class="bar"><i style="width:${p.hum||76}%"></i></div><span>Ideal: 70–85%</span></div>
  <div class="card"><small>Temperatura</small><b>${p.temp||24}°C</b><div class="bar"><i style="width:60%"></i></div><span>Ideal: 22–26°C</span></div>
@@ -70,7 +85,7 @@ function auto(){
 function scanner(){
  const r=S.scan;
  return `<div class="top"><div class="brand"><span class="circ" style="width:40px;height:40px;font-size:20px">${ic('plant')}</span>Diagnóstico por Foto</div><button class="ib" data-a="hist" aria-label="Histórico">${ic('hist')}</button></div>
- <div class="scan">${S.photo&&S.photo.for==='scan'?`<img src="${S.photo.src}" alt="Planta analisada">`:LEAF.replace('class="leaf"','style="width:110px;height:140px"')}<span class="st">${r?'● Scanner ativo • Análise IA':'Tira ou carrega uma foto'}</span><span class="cr 1"></span><span class="cr 2"></span><span class="cr 3"></span><span class="cr 4"></span><button class="st" style="top:14px;right:44px" data-a="photo" data-for="scan">↻ ${r?'Recapturar':'Capturar'}</button></div>
+ <div class="scan">${S.photo&&S.photo.for==='scan'?`<img src="${S.photo.src}" alt="Planta analisada">`:`<img src="${REAL_PLANT}" alt="Planta em análise" loading="eager">`}<span class="st">${r?'● Scanner ativo • Análise IA':'Tira ou carrega uma foto'}</span><span class="cr-1"></span><span class="cr-2"></span><span class="cr-3"></span><span class="cr-4"></span><button class="st" style="top:14px;right:44px" data-a="photo" data-for="scan">${ic('refresh')} ${r?'Recarregar':'Capturar'}</button></div>
  ${S.hist?`<div class="card list" style="margin-top:16px">${S.scans.map(s=>`<div class="it"><span class="circ">${ic('bm')}</span><span class="grow"><div class="name" style="font-size:16px">${s.sp}</div><div class="sub" style="font-size:14px">${s.dx}</div></span><span class="chip">${s.w}</span></div>`).join('')||'<div class="empty">Ainda sem diagnósticos guardados.</div>'}</div>`:''}
  ${r?`<div class="card" style="margin-top:16px"><div class="row sp"><div><small class="sub" style="font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:12px">Espécie identificada</small><div class="name" style="font-size:26px;margin-top:4px">${r.sp}</div></div><span class="tag">● ${r.c}% certeza</span></div><div class="bar" style="margin:14px 0"><i style="width:${r.c}%"></i></div>
  <div class="box row"><span class="circ">${ic('bad')}</span><div><small class="sub" style="font-weight:700">Diagnóstico Clínico</small><div class="name" style="font-size:17px">${r.dx}</div></div></div>
@@ -80,14 +95,39 @@ function scanner(){
 
 const V={home,armario:cab,plantas:plants,auto,scanner};
 const N=[['home','home','Início'],['armario','box','Armário'],['plantas','plant','Plantas'],['auto','sl','Automações'],['scanner','scan','Scanner']];
+
 function render(){
+ if(!S.loggedIn){
+  $('#app').innerHTML=authScreen();
+  $('#nav').innerHTML='';
+  save();
+  return;
+ }
  $('#app').innerHTML=V[S.tab]();
  $('#nav').innerHTML=N.map(n=>`<button data-a="tab" data-v="${n[0]}" ${S.tab==n[0]?'aria-current="page"':''}>${ic(n[1])}${n[2]}</button>`).join('');
  save();
 }
+
 document.addEventListener('click',e=>{
  const b=e.target.closest('[data-a]');if(!b)return;const a=b.dataset.a,v=b.dataset.v,id=+b.dataset.id;
  const pl=i=>S.plants.find(p=>p.id==i);
+ if(a==='auth-mode'){S.authView=v;render();return}
+ else if(a==='auth-login'){const email=normalizeEmail($('#login-email').value),password=$('#login-password').value.trim();
+  const accounts=readAccounts();const user=accounts.find(acc=>normalizeEmail(acc.email)===email && acc.password===password);
+  if(!user){toast('E-mail ou palavra-passe inválidos');return}
+  S.loggedIn=true;S.sessionUser={name:user.name,email:user.email};S.tab='home';S.authView='login';render();return
+ }
+ else if(a==='auth-signup'){const name=$('#signup-name').value.trim(),email=normalizeEmail($('#signup-email').value),password=$('#signup-password').value.trim();
+  if(!name||!email||password.length<6){toast('Preenche todos os campos corretamente');return}
+  const accounts=readAccounts();if(accounts.some(acc=>normalizeEmail(acc.email)===email)){toast('Este e-mail já está associado a outra conta');return}
+  const newUser={name,email,password};accounts.push(newUser);writeAccounts(accounts);S.loggedIn=true;S.sessionUser={name,email};S.tab='home';S.authView='login';toast('Conta criada com sucesso');render();return
+ }
+ else if(a==='auth-recover'){const email=normalizeEmail($('#recover-email').value);if(!email){toast('Indica o e-mail para recuperar a palavra-passe');return}
+  const user=readAccounts().find(acc=>normalizeEmail(acc.email)===email);if(!user){toast('Nenhuma conta encontrada com este e-mail');return}
+  toast('Link de recuperação enviado para '+email);S.authView='login';render();return
+ }
+ else if(a==='logout'){S.loggedIn=false;S.sessionUser=null;S.authView='login';render();return}
+ if(!S.loggedIn)return;
  if(a==='tab'){S.tab=v;S.plant=null;S.adding=false;scrollTo(0,0)}
  else if(a==='water'){const p=pl(id);p.days=5;(p.h=p.h||[]).unshift({i:'drop',t:'Rega ('+p.how+')',d:'Marcada na app',w:'Agora'});toast(p.n+' regada ✓')}
  else if(a==='open'){S.tab='plantas';S.plant=id;scrollTo(0,0)}
@@ -112,6 +152,16 @@ document.addEventListener('click',e=>{
  else if(a==='saveScan'){S.scans.unshift({sp:S.scan.sp,dx:S.scan.dx,w:'Agora'});toast('Guardado no histórico')}
  render();
 });
+
+document.addEventListener('submit',e=>{
+ const form=e.target;
+ if(!form||!form.matches('.auth-form'))return;
+ e.preventDefault();
+ const btn=form.querySelector('[data-a]');
+ if(!btn)return;
+ btn.click();
+});
+
 document.addEventListener('input',e=>{if(e.target.dataset.r==='light'){S.lightPct=+e.target.value;e.target.closest('.ctl').querySelector('small').textContent=S.lightPct+'%';save()}});
 $('#file').addEventListener('change',e=>{
  const f=e.target.files[0];if(!f)return;const fr=new FileReader();
