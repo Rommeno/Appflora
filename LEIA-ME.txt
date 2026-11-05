@@ -1,0 +1,8 @@
+Fotos locais (JPG) com estes nomes exatos, nesta pasta:
+
+  alocasia-frydek.jpg
+  monstera-thai-constellation.jpg
+
+Monstera deliciosa e Philodendron melanochrysum usam fotos da Wikimedia Commons (precisam de internet).
+Se uma foto falhar, a app mostra uma ilustração da folha.
+Em cada planta, "Tirar foto" / "Galeria" substitui a foto pela tua.
