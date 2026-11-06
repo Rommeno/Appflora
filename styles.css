@@ -100,3 +100,92 @@ nav button svg{font-size:22px}nav button[aria-current=page]{background:var(--ct)
 .auth-foot{display:flex;justify-content:center;gap:8px;margin-top:18px;color:var(--mu);font-size:14px}
 .inline-action{color:var(--pr);font-weight:700}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+:root[data-theme="dark"]{--bg:#0f1712;--sf:#17211b;--tx:#e6efe9;--mu:#9bab9f;--pr:#7fd9a4;--on:#0b2a19;--ct:#1f4a33;--ch:#223029;--ln:#26342b;--sh:none}
+:root[data-theme="light"]{color-scheme:light}:root[data-theme="dark"]{color-scheme:dark}
+body,.card,.sheet,nav,.tog,.btn,.chip{transition:background-color .3s,color .3s,box-shadow .3s}
+#app.enter>*:not(.top){animation:up .5s cubic-bezier(.2,.7,.2,1) both}
+#app.enter>*:nth-child(2){animation-delay:.04s}#app.enter>*:nth-child(3){animation-delay:.08s}#app.enter>*:nth-child(4){animation-delay:.12s}#app.enter>*:nth-child(5){animation-delay:.16s}#app.enter>*:nth-child(n+6){animation-delay:.2s}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--pr) 45%,transparent)}100%{box-shadow:0 0 0 9px transparent}}
+@keyframes ringin{from{stroke-dashoffset:var(--c)}}
+@keyframes drop{to{transform:rotate(var(--a)) translateY(calc(var(--d)*-1));opacity:0}}
+.ph svg{transform-origin:50% 95%;animation:sway 6s ease-in-out infinite}
+.dot.live{animation:pulse 2s infinite}
+.btn,.pc,.it,.ib,.chips button,nav button{transition:transform .15s,background-color .2s}
+.btn:active,.pc:active,.ib:active{transform:scale(.96)}
+.btn.danger{background:color-mix(in srgb,#d33 14%,var(--sf));color:#c0392b}
+:root[data-theme="dark"] .btn.danger{color:#ffb4ab}
+.ring{width:84px;height:84px;stroke-width:8;flex:none}.ring .rt{stroke:var(--ch)}.ring .rf{stroke:var(--pr);animation:ringin 1.1s ease-out both}.ring .rn{fill:var(--tx);stroke:none;font:500 19px 'Space Grotesk',sans-serif}
+.hc{background:linear-gradient(145deg,var(--sf),color-mix(in srgb,var(--ct) 55%,var(--sf)))}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:18px;padding-top:16px;border-top:1px solid var(--ln);text-align:center}
+.stats b{display:block;font:500 24px 'Space Grotesk',sans-serif}.stats span{font-size:12px;color:var(--mu)}
+.tip{display:flex;gap:14px;align-items:flex-start}.tip p{margin-top:2px}
+.dot.live{display:inline-block}
+.badge{position:absolute;top:10px;left:10px;display:inline-flex;gap:4px;align-items:center;background:var(--pr);color:var(--on);font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;z-index:2}
+.pc{position:relative}
+.seg.tabs{margin:18px 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.two .card{margin:0}
+.ul,.steps{margin:10px 0 0;padding-left:20px;display:grid;gap:8px;color:var(--mu);font-size:14px}.steps{color:var(--tx);font-size:15px;margin:0}
+.water{margin-top:14px}
+.av{overflow:hidden;background:var(--ct);color:var(--pr);font-weight:700;padding:0}.av img{width:100%;height:100%;object-fit:cover}
+.avw{text-align:center;margin:6px 0 22px}
+.avatar{position:relative;width:104px;height:104px;border-radius:50%;background:var(--ct);color:var(--pr);display:grid;place-items:center;font:500 40px 'Space Grotesk',sans-serif;margin:0 auto;text-align:center}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.avatar i{position:absolute;right:-2px;bottom:2px;width:34px;height:34px;border-radius:50%;background:var(--pr);color:var(--on);display:grid;place-items:center;font-size:17px;border:3px solid var(--bg);font-style:normal}
+.form{display:grid;gap:14px}
+.pw{position:relative}.pw input{width:100%;padding-right:48px}
+.eye{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:20px;color:var(--mu);text-align:center}
+.eye:hover{color:var(--pr)}
+.form .field input,.auth-form .field input{width:100%}
+.auth-card{position:relative}.auth-theme{position:absolute;right:14px;top:14px;color:var(--mu)}
+.splash{position:fixed;z-index:50;pointer-events:none;width:0;height:0}
+.splash i{position:absolute;width:8px;height:12px;margin:-6px 0 0 -4px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--pr);animation:drop .8s ease-out forwards}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Give the garden app a wider canvas and a softer, leafy backdrop. */
+:root{--bg:#e9f2e8;--sf:#fbfdf9;--ch:#e7f0e6}
+body{
+ background:
+  radial-gradient(ellipse at 9% 12%,color-mix(in srgb,var(--pr) 14%,transparent) 0,transparent 28rem),
+  radial-gradient(ellipse at 92% 38%,color-mix(in srgb,var(--pr) 10%,transparent) 0,transparent 34rem),
+  linear-gradient(145deg,var(--bg),color-mix(in srgb,var(--bg) 68%,var(--ct)));
+ background-attachment:fixed;
+}
+body::after{
+ content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;
+ background-image:radial-gradient(color-mix(in srgb,var(--pr) 28%,transparent) 1px,transparent 1px);
+ background-size:24px 24px;mask-image:linear-gradient(90deg,#000,transparent 24%,transparent 76%,#000);
+}
+#app{max-width:1180px;padding:12px 42px 132px}
+nav div{max-width:760px}
+nav{background:color-mix(in srgb,var(--sf) 92%,transparent);backdrop-filter:blur(16px)}
+.top{height:72px}
+.top .brand{font-size:21px}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 22px}
+.ph.sq{aspect-ratio:1.08}
+.hc{padding:28px 32px;border:1px solid color-mix(in srgb,var(--pr) 12%,var(--ln))}
+.feat{display:grid;grid-template-columns:minmax(280px,.85fr) 1.15fr;align-items:center;gap:12px}
+.ph.wide{height:100%;min-height:230px}
+.fb{padding:20px 24px}
+.scan{max-width:900px}
+.m{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card,.care-card,.preferences-card{border:1px solid color-mix(in srgb,var(--pr) 8%,var(--ln))}
+:root[data-theme="dark"]{--bg:#101a13;--sf:#18251c;--ch:#233329}
+@media(max-width:760px){
+ #app{max-width:600px;padding:6px 22px 124px}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}
+ .m{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .feat{grid-template-columns:minmax(200px,.8fr) 1.2fr}
+ .ph.wide{min-height:210px}
+}
+@media(max-width:520px){
+ #app{padding:0 16px 116px}
+ .top{height:64px}
+ .top .brand{font-size:19px}
+ .feat{grid-template-columns:1fr;gap:0}
+ .ph.wide{height:190px;min-height:0}
+ .fb{padding:16px 8px 6px}
+ .hc{padding:20px}
+ .grid{gap:18px 12px}
+}
